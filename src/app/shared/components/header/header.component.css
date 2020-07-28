@@ -1,0 +1,13 @@
+.header {
+    width: 100%;
+    padding: 15px;
+    background: yellowgreen;
+    font-size: 1.5em;
+    font-family: 'Gloria';
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Gloria';
+    src:  url('/assets/fonts/Gloria_Hallelujah/GloriaHallelujah-Regular.ttf')
+}
