@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppComponent } from '../app.component';
 import { ActionIconComponent } from './components/action-icon/action-icon.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CardComponent } from './components/card/card.component';
+import { ContainerComponent } from './components/container/container.component';
 
 @NgModule({
-    declarations: [ AppComponent],
+    declarations: [ HeaderComponent, ActionIconComponent, CardComponent, ContainerComponent ],
     imports: [
-      CommonModule,
-      HeaderComponent,
-      ActionIconComponent
+      CommonModule
     ],
-    exports: [ HeaderComponent, ActionIconComponent ],
+    exports: [ HeaderComponent, ActionIconComponent, CardComponent, ContainerComponent ]
   })
   export class SharedModule { }

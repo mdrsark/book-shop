@@ -1,24 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { SharedModule } from './shared/shared.module';
+import { BooksModule } from './books/books.module';
+
 
 import { AppComponent } from './app.component';
-import { ContainerComponent } from './components/container/container.component';
-import { ActionIconComponent } from './shared/components/action-icon/action-icon.component';
-import { CardComponent } from './components/card/card.component';
-import { ListComponent } from './components/list/list.component';
-import { HeaderComponent } from './shared/components/header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    ContainerComponent,
-    CardComponent,
-    ListComponent,
-    ActionIconComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule,
+    BooksModule
   ],
   providers: [],
   bootstrap: [AppComponent]
