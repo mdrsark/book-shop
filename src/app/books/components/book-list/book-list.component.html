@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="row row-cols-3 justify-content-start align-items-center">
-        <div *ngFor="let bookItem of books" class="col">
+    <div class="row row-cols-3">
+        <div *ngFor="let bookItem of books" class="col pt-4">
             <app-card [bookItem]="bookItem"></app-card>
         </div>
     </div>
