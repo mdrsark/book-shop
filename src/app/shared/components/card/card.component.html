@@ -1,11 +1,8 @@
-<div class="card-container">
-    <div class="card-name">
-        {{ bookItem.name }}
-    </div>
-    <div class="card-author">
-        {{ bookItem.author }}
-    </div>
-    <div class="image">
-        {{ bookItem.imageURL }}
+<div class="card" style="width: 18rem;">
+    <img src="{{ bookItem.imageURL }}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{ bookItem.name }}</h5>
+        <p class="card-text">{{ bookItem.author }}</p>
     </div>
 </div>
+

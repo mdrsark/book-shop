@@ -4,25 +4,55 @@ import { IBookInfo } from '../../models/book.model';
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
-  styleUrls: ['./book-list.component.css']
+  styleUrls: ['./book-list.component.css'],
 })
 export class BookListComponent implements OnInit {
 
   books: Array<IBookInfo> = [
     {
-      imageURL: 'http://something.com',
-      name: 'Cien años de Soledad',
-      author: 'Gabriel García Marquéz'
+      imageURL: '../../../../assets/img/arrivals.jpg',
+      name: 'The Arrivals',
+      author: 'Lucas Yolld'
     },
     {
-      imageURL: 'http://something.com',
-      name: 'Cien años de Soledad',
-      author: 'Gabriel García Marquéz'
+      imageURL: '../../../../assets/img/canciones.jpg',
+      name: 'Fuimos Canciones',
+      author: 'Elísabet Benavent'
     },
     {
-      imageURL: 'http://something.com',
-      name: 'Cien años de Soledad',
-      author: 'Gabriel García Marquéz'
+      imageURL: '../../../../assets/img/cultura.jpg',
+      name: 'El día que se perdió la cultura',
+      author: 'Javier Castillo'
+    },
+    {
+      imageURL: '../../../../assets/img/dracula.jpg',
+      name: 'Dracula',
+      author: 'Bram Stoker'
+    },
+    {
+      imageURL: '../../../../assets/img/odesa.jpg',
+      name: 'Ordesa',
+      author: 'Manuel Vila'
+    },
+    {
+      imageURL: '../../../../assets/img/grimorio.jpg',
+      name: 'Grimorio 13',
+      author: 'Alvaro Aparicio'
+    },
+    {
+      imageURL: '../../../../assets/img/hobbit.jpg',
+      name: 'The Hobbit',
+      author: 'J.R.R Tolkein'
+    },
+    {
+      imageURL: '../../../../assets/img/norte.jpg',
+      name: 'Los Hombres del Norte',
+      author: 'John Haywood'
+    },
+    {
+      imageURL: '../../../../assets/img/surviving.jpg',
+      name: 'Surviving the ABYSS',
+      author: 'Lola Sutton'
     }
   ];
 
