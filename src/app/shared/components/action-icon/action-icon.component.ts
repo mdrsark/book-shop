@@ -14,4 +14,8 @@ export class ActionIconComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClick() {
+    this.icon = 'x';
+  }
+
 }
