@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IBookInfo } from '../../../books/models/book.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -9,10 +10,15 @@ import { IBookInfo } from '../../../books/models/book.model';
 export class CardComponent implements OnInit {
 
   @Input() bookItem: IBookInfo;
+  @Input() pathUrl: string;
 
-  constructor() { }
+  constructor( private router : Router) { }
 
   ngOnInit(): void {
+  }
+
+  onClick(path) {   
+    this.router.navigate([ 'details', path ]);
   }
 
 }

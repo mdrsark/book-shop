@@ -1,4 +1,4 @@
-<div class="card h-100 text-center" style="width: 18rem;">
+<div class="card h-100 text-center" style="width: 18rem;" (click)="onClick(bookItem.id)" style="cursor: pointer;">
     <img src="{{ bookItem.imageURL }}" class="card-img-top" alt="...">
     <div class="card-body h-100">
         <h5 class="card-title">{{ bookItem.name }}</h5>
