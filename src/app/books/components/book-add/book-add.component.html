@@ -1,3 +1,50 @@
-<p>book-add works!</p>
-
 <app-action-icon icon="x" pathUrl=""></app-action-icon>
+<div class="container pt-4">
+    <form class="bookForm" (submit)="onSubmit()">
+        <h2>Book</h2>
+        <div class="form-row">
+            <div class="col">
+                <label for="name">Name</label>
+                <input type="email" class="form-control" id="name" aria-describedby="emailHelp" name="name" [(ngModel)]="name">
+                <small id="emailHelp" class="form-text text-muted">Example: "Cien años de Soledad"</small>
+            </div>
+            <div class="col">
+                <label for="author">Author</label>
+                <input type="text" class="form-control" id="author" name="author" [(ngModel)]="author">
+                <small id="emailHelp" class="form-text text-muted">Example: "Gabriel García Marquéz"</small>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <label for="year">Publication year</label>
+                <input type="number" class="form-control" id="year" name="publicationYear" [(ngModel)]="publicationYear">
+                <small id="emailHelp" class="form-text text-muted">Example: "1985"</small>
+            </div>
+            <div class="col">
+                <label for="editorial">Editorial</label>
+                <input type="text" class="form-control" id="editorial" name="editorial" [(ngModel)]="editorial">
+                <small id="emailHelp" class="form-text text-muted">Example: "Norma"</small>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <label for="url">Image URL</label>
+                <input type="text" class="form-control" id="imageURL" name="imageURL" [(ngModel)]="imageURL">
+                <small id="emailHelp" class="form-text text-muted">Example: "https://yourimageurl.com/images/A34gSDSD_trurty67"</small>
+            </div>
+            <div class="col">
+                <label for="genre">Genre</label>
+                <input type="text" class="form-control" id="genre" name="genre" [(ngModel)]="genre">
+                <small id="emailHelp" class="form-text text-muted">Example: "Thriller"</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="desc" rows="3" name="about" [(ngModel)]="about"></textarea>
+            <small id="emailHelp" class="form-text text-muted">Optional</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>

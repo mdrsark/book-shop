@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { IBookInfo, BooksCatalog } from '../../models/book.model';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+
+// Model
+import { IBookInfo, BooksCatalog } from '../../models/book.model';
+
+// Services
+import { BookManagerService } from '../../services/book-manager.service';
 
 @Component({
   selector: 'app-book-detail',
@@ -10,24 +15,14 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 export class BookDetailComponent implements OnInit {
 
   book : IBookInfo;
-  catalog: Array<IBookInfo> = BooksCatalog;
-  bookId : string = null;
-
-
-  constructor( private route : ActivatedRoute ) {}
+  
+  constructor( private route : ActivatedRoute,
+    private bookManagerService : BookManagerService ) {}
   
   ngOnInit(): void {
     this.route.paramMap.subscribe(( params : ParamMap ) => {
-      this.bookId = params.get('id');
-      this.getBookInformation(this.bookId);
-    });
-  }
-
-  getBookInformation(bookId : string) {
-    this.catalog.forEach(element => {
-        if (element.id === bookId) {
-          this.book = element;
-        }
+      const bookId = params.get('id');
+      this.book = this.bookManagerService.getBookById(bookId);
     });
   }
 }

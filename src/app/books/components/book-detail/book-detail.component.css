@@ -1,0 +1,8 @@
+.card-body {
+    font-family: 'Gloria';
+}
+
+@font-face {
+    font-family: 'Gloria';
+    src: url('/assets/fonts/Gloria_Hallelujah/GloriaHallelujah-Regular.ttf');
+}
